@@ -1,10 +1,7 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-
-      <!--留坑-->
-    <router-view></router-view>
-
+      <!--使用router-view将路由渲染出来-->
+      <router-view></router-view>
   </div>
 </template>
 
