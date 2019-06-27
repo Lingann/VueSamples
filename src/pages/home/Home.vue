@@ -10,10 +10,10 @@
 </template>
 
 <script>
-    import List from "./children/List";
-    import Body from "./children/Body";
-    import Header from "../../components/header/Header";
-    import Footer from "../../components/footer/Footer";
+    import List from "../../components/list/List";
+    import Body from "./body/Body";
+    import Header from "./header/Header";
+    import Footer from "./footer/Footer";
 
     export default {
         name: "home",

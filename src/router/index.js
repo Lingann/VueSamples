@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../pages/home/Home'
-import HomeList from '../pages/home/children/List'
-import HomeBody from  '../pages/home/children/Body'
+import List from '../components/list/List'
+import HomeBody from '../pages/home/body/Body'
+import Data from  '../components/data/Data'
 Vue.use(Router);
 
 export default new Router({
@@ -17,14 +18,21 @@ export default new Router({
             component: Home,
             children: [
                 {
-                    path: 'list',
-                    component: HomeList
-                },
-                {
                     path: 'body',
                     component: HomeBody
+                },
+                {
+                    name: 'list',
+                    path: '/list/',
+                    component: List
+                },
+                {
+                    name: 'data',
+                    path: '/data/',
+                    component: Data
                 }
             ]
-        }
+        },
+
     ]
 })

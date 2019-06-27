@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import './plugins/axios'
 import App from './App.vue'
 import router from './router' // 在这里引用的是/router/index.js 里面的Router
 
