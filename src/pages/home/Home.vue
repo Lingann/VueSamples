@@ -1,23 +1,17 @@
 <template>
     <main id="main" class="main">
-        <Header></Header>
-        <!--<router-view></router-view>-->
+        <!--<Header></Header>-->
         <Body></Body>
-        <List></List>
-        <Footer></Footer>
     </main>
 
 </template>
 
 <script>
-    import List from "../../components/list/List";
     import Body from "./body/Body";
-    import Header from "./header/Header";
-    import Footer from "./footer/Footer";
 
     export default {
         name: "home",
-        components: {Footer, Header, Body, List,}
+        components: {Body}
     }
 </script>
 

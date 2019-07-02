@@ -19,7 +19,7 @@
         methods: {
             request : function(){
                 this.$axios
-                    .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+                    .get('http://139.155.116.230/api/values')
                     .then(response => (this.response = response))
             }
         }

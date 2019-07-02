@@ -1,6 +1,6 @@
 <template>
-    <div id="container" class="row bg-sample">
-        <div class="side-menu col-xs-2 bg-blue">
+    <div id="container" class="bg-sample">
+        <div class="side-menu bg-blue">
             <ul>
                 <router-link tag="li" class="link row center-xs middle-xs" :to="{name: 'list'}"><div class="col"><div class="box">list</div></div></router-link>
                 <router-link tag="li" class="link row center-xs middle-xs" :to="{name: 'data'}"><div class="col"><div class="box">list</div></div></router-link>
@@ -9,7 +9,7 @@
                 <router-link tag="li" class="link row center-xs middle-xs" :to="{name: 'list'}"><div class="col"><div class="box">list</div></div></router-link>
             </ul>
         </div>
-        <div class="col-xs-21"><router-view></router-view></div>
+        <div class="right-container"><router-view></router-view></div>
     </div>
 </template>
 
@@ -28,13 +28,16 @@
     #container{
         background: #019fa0;
         width: 100%;
-        height: calc( 100% - 80px );
+        height: 100%;
     }
     .box{
         position: relative;
         text-align: center;
     }
     .side-menu{
+        position: fixed;
+        width: 260px;
+        height: 100%;
         background-color: $gray-blue;
         ul{
             li{
@@ -47,5 +50,9 @@
 
 
         }
+    }
+    .right-container{
+        margin-left: 260px;
+        /*width:*/
     }
 </style>
