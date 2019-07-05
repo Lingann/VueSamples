@@ -4,7 +4,7 @@
             <ul>
                 <router-link tag="li" class="link row center-xs middle-xs" :to="{name: 'list'}"><div class="col"><div class="box">list</div></div></router-link>
                 <router-link tag="li" class="link row center-xs middle-xs" :to="{name: 'data'}"><div class="col"><div class="box">list</div></div></router-link>
-                <router-link tag="li" class="link row center-xs middle-xs" :to="{name: 'list'}"><div class="col"><div class="box">list</div></div></router-link>
+                <router-link tag="li" class="link row center-xs middle-xs" :to="{name: 'user'}"><div class="col"><div class="box">list</div></div></router-link>
                 <router-link tag="li" class="link row center-xs middle-xs" :to="{name: 'list'}"><div class="col"><div class="box">list</div></div></router-link>
                 <router-link tag="li" class="link row center-xs middle-xs" :to="{name: 'list'}"><div class="col"><div class="box">list</div></div></router-link>
             </ul>

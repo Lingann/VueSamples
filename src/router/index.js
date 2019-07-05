@@ -4,6 +4,7 @@ import Home from '../pages/home/Home'
 import List from '../components/list/List'
 import HomeBody from '../pages/home/body/Body'
 import Data from  '../components/data/Data'
+import User from  '../components/data/User'
 Vue.use(Router);
 
 export default new Router({
@@ -30,6 +31,11 @@ export default new Router({
                     name: 'data',
                     path: '/data/',
                     component: Data
+                },
+                {
+                    name: 'user',
+                    path: '/user/',
+                    component: User
                 }
             ]
         },
