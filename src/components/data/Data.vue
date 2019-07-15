@@ -19,9 +19,11 @@
         methods: {
             request : function(){
                 this.$axios
-                    .get('http://139.155.116.230/api/values')
-                    .then(response => (this.response = response))
+                    .get('https://localhost:44339/api/user')
+                    .then(response => (this.response = response.data));
             }
+
+
         }
 
 

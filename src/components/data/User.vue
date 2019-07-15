@@ -3,7 +3,7 @@
         <form @submit.prevent="submit">
 
             <div class="field">
-                <span>姓名：</span> <input name="user_name" type="text">
+                <span>姓名：</span> <input name="name" type="text">
             </div>
             <div class="field">
                 <span>年龄：</span> <input name="age" type="number">
@@ -12,6 +12,7 @@
                 <span>email：</span> <input name="email" type="email">
             </div>
 
+            age: 0 ,
             <input type="submit" value="提交">
         </form>
     </div>
@@ -23,8 +24,7 @@
         data:function () {
             return {
                 user:{
-                    user_name : "",
-                    age: 0 ,
+                    name : "",
                     email: "123@123.com"
                 }
             }
@@ -38,8 +38,8 @@
                 }
                 console.log(value);
                 this.$axios
-                    .post('http://localhost:8478/api/user',{
-                        user_name: value.user_name,
+                    .post('https://localhost:44339/api/user',{
+                        name: value.name,
                         age: value.age,
                         email: value.email
                     })

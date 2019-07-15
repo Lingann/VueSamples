@@ -1,0 +1,87 @@
+<krpano>
+    <action name="plantview">
+       set(view.stereographic,"true");
+       set(view.fisheye,"1.0");
+       set(view.fov,"150");
+       set(view.fovtype,"MFOV");
+       set(view.fovmax,"150");
+       set(view.hlookat,"-60");
+       set(view.vlookat,"100");
+       set(view.maxpixelzoom,"2.0");
+   </action>
+
+    <action name="normalview">
+        tween(view.hlookat, 0, 2.5, easeInOutQuad);
+        tween(view.vlookat, 0, 2.5, easeInOutQuad);
+        tween(view.fov,     70,  2.5, easeInOutQuad);
+        tween(view.fisheye, 0.0, 2.5, easeInOutQuad);
+        wait(2.7);
+        set(display.flash10, on);
+        showtext('', infostyle)
+    </action>
+
+    <action name="prevscene">
+        copy(sceneindex, scene[get(xml.scene)].index);
+        sub(lastindex, scene.count, 1);
+        dec(sceneindex, 1, 0, get(lastindex));
+        loadscene(get(scene[get(sceneindex)].name), null, MERGE, BLEND(0.5));
+    </action>
+
+    <action name="nextscene">
+        copy(sceneindex, scene[get(xml.scene)].index);
+        sub(lastindex, scene.count, 1);
+        inc(sceneindex, 1, get(lastindex), 0);
+        loadscene(get(scene[get(sceneindex)].name), null, MERGE, BLEND(0.5));
+    </action>
+
+    <action name="autonextscene">
+        if(skin_settings.openautonext == 1,
+        nextscene();
+        delayedcall(autonexttimer,60, autonextscene();
+        );
+        );
+    </action>
+
+    <action name="autonextchange">
+        if(skin_settings.openautonext == 0,
+        set(skin_settings.openautonext,1);
+        set(autorotate.enabled,true);
+        delayedcall(autonexttimer,60, autonextscene(););
+        ,
+        set(skin_settings.openautonext,0);
+        stopdelayedcall(autonexttimer);
+        set(plugin[closeautonext].visible,false);
+        );
+    </action>
+
+    <action name="autogochange">
+        if(autorotate.enabled == true,
+        set(autorotate.enabled,false);,set(autorotate.enabled,true);
+        );
+    </action>
+
+    <!--自动旋转-->
+    <action name="startautorotate">
+        set(autorotate.enabled,"true");
+    </action>
+    <!--停止旋转-->
+    <action name="stopautorotate">
+        set(autorotate.enabled,"false");
+    </action>
+
+    <action name="picture_resize">
+        <!-- 使用屏幕宽度或高度的百分之九十 -->
+        div(aspect, layer[%1].imagewidth, layer[%1].imageheight);
+        mul(new_width, stagewidth, 0.90);
+        div(new_height, new_width, aspect);
+        mul(max_height, stageheight, 0.90);
+        if(new_height GT max_height,
+        copy(new_height, max_height);
+        mul(new_width, new_height, aspect);
+        );
+        roundval(new_width);
+        roundval(new_height);
+        copy(layer[%1].width, new_width);
+        copy(layer[%1].height, new_height);
+    </action>
+</krpano>

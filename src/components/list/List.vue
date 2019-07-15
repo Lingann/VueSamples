@@ -3,7 +3,7 @@
         <ul>
             <li v-for="item in items" v-bind:key="item.id">
                 <div class="card">
-                    <img src="../../assets/logo.png"/>
+                    <img src="favicon.ico"/>
                     <div class="card-des">{{item.uid}}</div>
                 </div>
             </li>

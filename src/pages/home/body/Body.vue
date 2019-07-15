@@ -3,10 +3,14 @@
         <div class="side-menu bg-blue">
             <ul>
                 <router-link tag="li" class="link row center-xs middle-xs" :to="{name: 'list'}"><div class="col"><div class="box">list</div></div></router-link>
-                <router-link tag="li" class="link row center-xs middle-xs" :to="{name: 'data'}"><div class="col"><div class="box">list</div></div></router-link>
-                <router-link tag="li" class="link row center-xs middle-xs" :to="{name: 'user'}"><div class="col"><div class="box">list</div></div></router-link>
-                <router-link tag="li" class="link row center-xs middle-xs" :to="{name: 'list'}"><div class="col"><div class="box">list</div></div></router-link>
-                <router-link tag="li" class="link row center-xs middle-xs" :to="{name: 'list'}"><div class="col"><div class="box">list</div></div></router-link>
+                <router-link tag="li" class="link row center-xs middle-xs" :to="{name: 'data'}"><div class="col"><div class="box">data</div></div></router-link>
+                <router-link tag="li" class="link row center-xs middle-xs" :to="{name: 'user'}"><div class="col"><div class="box">user</div></div></router-link>
+                <router-link tag="li" class="link row center-xs middle-xs" :to="{name: 'startScene'}"><div class="col"><div class="box">startScene</div></div></router-link>
+                <router-link tag="li" class="link row center-xs middle-xs" :to="{name: 'vtour'}"><div class="col"><div class="box">vtour</div></div></router-link>
+                <router-link tag="li" class="link row center-xs middle-xs" :to="{name: 'vueKrapno'}"><div class="col"><div class="box">vueKrapno</div></div></router-link>
+                <router-link tag="li" class="link row center-xs middle-xs" :to="{name: 'modal'}"><div class="col"><div class="box">modal</div></div></router-link>
+                <router-link tag="li" class="link row center-xs middle-xs" :to="{name: 'modals'}"><div class="col"><div class="box">modals</div></div></router-link>
+
             </ul>
         </div>
         <div class="right-container"><router-view></router-view></div>

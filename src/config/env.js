@@ -12,11 +12,11 @@ let routerMode = 'hash';
 let imgBaseUrl = '';
 
 
-if (process.env.NODE_ENV == 'development') {
+if (process.env.NODE_ENV === 'development') {
     imgBaseUrl = '/img/';
-
-}else if(process.env.NODE_ENV == 'production'){
-    baseUrl = '//elm.cangdu.org';
+    baseUrl = "https://localhost:44339";
+}else if(process.env.NODE_ENV === 'production'){
+    baseUrl = '';
     imgBaseUrl = '//elm.cangdu.org/img/';
 }
 
